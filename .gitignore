@@ -1,0 +1,7 @@
+"# Execut veis do C" 
+"*.exe" 
+"*.o" 
+"*.out" 
+"" 
+"# VS Code" 
+".vscode/" 
