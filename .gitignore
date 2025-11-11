@@ -1,7 +1,7 @@
-"# Execut veis do C" 
-"*.exe" 
-"*.o" 
-"*.out" 
-"" 
-"# VS Code" 
-".vscode/" 
+tempCodeRunnerFile.*
+*.exe
+*.o
+.vscode/
+*.log
+*_backup
+*.out
