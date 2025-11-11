@@ -1,9 +1,19 @@
 #include <stdio.h>
 
+int verificar(int num);
 int main()
 {
-    int m;
-    scanf("%d",&m);
-    printf("%d",m*2);
+    int valor;
+    scanf("%d",&valor);
+    printf("%d",verificar(valor));
     return 0;
+}
+int verificar(int num){
+    if (num>0){
+        return 1;
+    }else if(num<0){
+        return -1;
+    }else{
+        return 0;
+    }
 }

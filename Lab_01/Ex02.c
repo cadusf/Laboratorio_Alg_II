@@ -1,9 +1,18 @@
 #include <stdio.h>
 
+void data(int dia, int mes, int ano);
+
 int main()
 {
-    int c;
-    scanf("%d",&c);
-    printf(" oii ");
+    int dia, mes, ano;
+    scanf("%d %d %d", &dia, &mes, &ano);
+    data(dia, mes, ano);
     return 0;
+}
+
+void data(int dia, int mes, int ano){
+    char meses[12][20] = {"janeiro", "fevereiro", "marco", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"};
+
+    printf("%d de %s de %d", dia, meses[mes-1], ano);
+    return;
 }
