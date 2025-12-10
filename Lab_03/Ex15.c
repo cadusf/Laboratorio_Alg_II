@@ -1,25 +1,39 @@
 #include <stdio.h>
+#include <math.h>
 
-int main() 
+int raizes(float a, float b, float c, float *x1, float *x2);
+
+int main()
 {
-
-    int numero = 10;
-    int *d = &numero;  
-    *d = 8;
-    printf("Valor: %d\n", numero);      // 10
-    printf("Endereco: %p\n", &numero);  // Endereço
-    printf("Via ponteiro: %d\n", *d;   // 10 (usando *)
-
+    float a, b, c, r1, r2;
+    int qtd;
+    
+    printf("A B C: ");
+    scanf("%f %f %f", &a, &b, &c);
+    
+    qtd = raizes(a, b, c, &r1, &r2);
+    
+    if(qtd == 0) printf("Nao tem raiz real");
+    else if(qtd == 1) printf("Raiz: %.2f", r1);
+    else printf("Raizes: %.2f e %.2f", r1, r2);
+    
     return 0;
 }
-'int vetor[3] = {10, 20, 30};
 
-MEMÓRIA:
-Endereço   Valor   Como acessar
-0x100      10      vetor[0], *vetor, *(vetor+0)
-0x104      20      vetor[1], *(vetor+1)  
-0x108      30      vetor[2], *(vetor+2)
-
-int *p = vetor;  // p = 0x100
-p++;            // p = 0x104 (agora aponta para 20)
-'
+int raizes(float a, float b, float c, float *x1, float *x2)
+{
+    float delta;
+    
+    delta = b * b - 4 * a * c;
+    
+    if(delta < 0) return 0;
+    else if(delta == 0){
+        *x1 = -b / (2 * a);
+        return 1;
+    }
+    else{
+        *x1 = (-b + sqrt(delta)) / (2 * a);
+        *x2 = (-b - sqrt(delta)) / (2 * a);
+        return 2;
+    }
+}
