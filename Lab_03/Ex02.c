@@ -1,5 +1,4 @@
 #include <stdio.h>
-//Escreva um programa que contenha duas variáveis inteiras. Compare seus endereços e exiba o maior endereço.
 int main()
 {
     int num1, num2;

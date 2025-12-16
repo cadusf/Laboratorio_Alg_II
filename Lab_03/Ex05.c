@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void troca(int *a, int *b);
+void organiza(int *a, int *b);
 
 int main()
 {
@@ -16,7 +16,7 @@ int main()
     return 0;
 }
 
-void troca(int *a, int *b) {
+void organiza(int *a, int *b) {
     int i;  
     if (*a < *b){
         i = *a;   
